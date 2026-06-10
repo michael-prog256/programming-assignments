@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>розклад</title>
+    <style>
+      
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f7fafc; 
+            color: #2d3748;
+            margin: 0;
+            padding: 30px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a365d;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #2b6cb0;
+            border-left: 5px solid #2b6cb0;
+            padding-left: 10px;
+            margin-top: 40px;
+        }
+
+        /*Перша таблиця*/
+        .schedule-table-merged {
+            width: 100%;
+            border: 3px solid #4a5568; 
+            border-radius: 12px;     
+            border-spacing: 5px;      
+            border-collapse: separate; 
+            background-color: #ffffff;
+            margin-top: 15px;
+        }
+
+        .schedule-table-merged th, .schedule-table-merged td {
+            padding: 12px;           
+            text-align: center;
+        }
+
+     
+        .cell-accent-one {
+            background-color: #edf2f7;
+            color: #2b6cb0;
+        }
+
+        .cell-accent-two {
+            background-color: #feebc8;
+            color: #744210;
+        }
+
+        .day-column {
+            background-color: #e2e8f0;
+            font-weight: bold;
+            color: #2d3748;
+            font-size: 14pt;
+            letter-spacing: 2px;
+            width: 60px;
+        }
+
+        .para-column {
+            background-color: #cbd5e0;
+            font-weight: bold;
+            width: 90px;
+        }
+
+        /* Друга таблиця */
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            margin-top: 15px;
+        }
+
+       
+        .styled-table caption {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c5282;
+            text-align: left;
+        }
+
+      
+        .styled-table th {
+            background-color: #2b6cb0; 
+            color: #ffffff;           
+            font-weight: bold;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #1a365d;
+        }
+
+        .styled-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        
+        .styled-table tr:hover {
+            background-color: #f0f4f8;
+        }
+
+        
+        .auditory-cell {
+            text-align: right;
+            color: #dd6b20;   
+            font-weight: bold;
+        }
+
+        /*  Третя табличка */
+        .math-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            margin-top: 15px;
+            border: 1px solid #e2e8f0;
+            /* Рамка з тінню */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .math-table th {
+            background-color: #4a5568;
+            color: #ffffff;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .math-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        
+        .math-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        .math-table tr:nth-child(odd) {
+            background-color: #ffffff; /* Непарні рядки */
+        }
+
+        
+        .math-table td:first-child {
+            font-weight: bold;
+            color: #2b6cb0;
+        }
+
+        
+        .math-table td:last-child {
+            font-style: italic;
+            color: #4a5568;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Таблиці</h1>
+
+    <h2>Структура занять із об'єднанням комірок (Середа)</h2>
+    
+    <table class="schedule-table-merged">
+        <tr>
+            <td rowspan="6" class="day-column">С<br>Е<br>Р<br>Е<br>Д<br>А</td>
+            <td class="para-column">I пара</td>
+            <td colspan="2" class="cell-accent-one"><i>Вільне вікно (занять немає)</i></td>
+        </tr>
+        <tr>
+            <td class="para-column">II пара</td>
+            <td colspan="2" class="cell-accent-two">
+                Педагогіка та психологія вищої школи доц. Павлова<br>
+                <strong>за вибором</strong>
+            </td>
+        </tr>
+        <tr>
+            <td class="para-column">III пара</td>
+            <td colspan="2" class="cell-accent-one">
+                ДС № 3 за вибором доц. Вербіцький з 3 тиж.<br>
+                <strong>за вибором</strong>
+            </td>
+        </tr>
+        <tr>
+            <td class="para-column">IV пара</td>
+            <td colspan="2" class="cell-accent-two">
+                Асимптотичні методи в аналізі<br>
+                доц. Процеров<br>
+                л з 1 по 8 тиж.
+            </td>
+        </tr>
+        <tr>
+            <td class="para-column">V пара</td>
+            <td colspan="2" class="cell-accent-one">
+                Математ.методи в інвест.та аналізі ризиків інвест.<br>
+                доц. Васильєв<br>
+                <strong>л.</strong>
+            </td>
+        </tr>
+        <tr>
+            <td class="para-column">VI пара</td>
+            <td colspan="2" class="cell-accent-two">
+                Математ.методи в інвест.та аналізі ризиків інвест.<br>
+                доц. Васильєв<br>
+                <strong>лаб.</strong>
+            </td>
+        </tr>
+    </table>
+
+
+    <h2>Детальний розклад дня та аудиторій</h2>
+    
+    <p id="schedule-top">[Початок розкладу занять]</p>
+    <p>Внутрішня навігація: <a href="#schedule-bottom" target="_self">Перейти до кінця сторінки</a></p>
+
+    <table class="styled-table">
+        <caption>Офіційний розклад занять на середу для 1-го курсу</caption>
+        <thead>
+            <tr>
+                <th>Номер пари</th>
+                <th>Час дзвінка</th>
+                <th>Назва дисципліни та викладач</th>
+                <th style="text-align: right;">Номер аудиторії</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>I пара</td>
+                <td>08:30 – 09:50</td>
+                <td>—</td>
+                <td class="auditory-cell">—</td>
+            </tr>
+            <tr>
+                <td>II пара</td>
+                <td>10:00 – 11:20</td>
+                <td>Педагогіка та психологія вищої школи (доц. Павлова)</td>
+                <td class="auditory-cell">ауд. 402</td>
+            </tr>
+            <tr>
+                <td>III пара</td>
+                <td>11:40 – 13:00</td>
+                <td>ДС № 3 за вибором (доц. Вербіцький)</td>
+                <td class="auditory-cell">ауд. 315</td>
+            </tr>
+            <tr>
+                <td>IV пара</td>
+                <td>13:10 – 14:30</td>
+                <td>Асимптотичні методи в аналізі (доц. Процеров)</td>
+                <td class="auditory-cell">ауд. 212</td>
+            </tr>
+            <tr>
+                <td>V пара</td>
+                <td>14:40 – 16:00</td>
+                <td>Математ.методи в інвест. та аналізі ризиків (доц. Васильєв)</td>
+                <td class="auditory-cell">ауд. 501 (ОЦ)</td>
+            </tr>
+            <tr>
+                <td>VI пара</td>
+                <td>16:10 – 17:30</td>
+                <td>Математ.методи в інвест. (Лабораторна робота)</td>
+                <td class="auditory-cell">Лабораторія №3</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>Порівняльний аналіз видатних математиків</h2>
+    
+    <table class="math-table">
+        <thead>
+            <tr>
+                <th>Ім’я математика</th>
+                <th>Роки життя</th>
+                <th>Основні теореми / Внесок в аналіз</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Петер Густав Лежен Діріхле</td>
+                <td>1805 – 1859</td>
+                <td>Ознака Діріхле збіжності невласних інтегралів, принцип Діріхле.</td>
+            </tr>
+            <tr>
+                <td>Karl Weierstrass</td>
+                <td>1815 – 1897</td>
+                <td>Фундаментальна мажорантна ознака Вейєрштрасса для функціональних рядів та інтегралів.</td>
+            </tr>
+            <tr>
+                <td>Мішель Ролль</td>
+                <td>1652 – 1719</td>
+                <td>Теорема Ролля про нулі похідної функції на проміжку.</td>
+            </tr>
+            <tr>
+                <td>Жозеф-Луї Лагранж</td>
+                <td>1736 – 1813</td>
+                <td>Теорема Лагранжа про середнє значення диференційовної функції, формули оптимізації.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
+    <p id="schedule-bottom"> [Кінець сторінки]</p>
+    <p><a href="#schedule-top" target="_self">Повернутися вгору до розкладу</a></p>
+
+</body>
+</html>
