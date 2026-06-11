@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Задача 15</title>
+</head>
+
+<body>
+
+  <h2>Банківський вклад</h2>
+
+  <p>
+    Дано n (місяці) і p (%). Щомісяця вклад збільшується на p%.
+    Знайти у скільки разів зміниться вклад.
+  </p>
+
+  <label>n</label>
+  <input id="n" type="text"><br>
+
+  <label>p</label>
+  <input id="p" type="text"><br>
+
+  <button onclick="calcBank()">Розрахувати</button>
+
+  <p id="bankResult"></p>
+
+  <script>
+    function calcBank() {
+
+      console.log("Обчислення розпочато");
+
+      let nVal = document.getElementById("n").value;
+      let pVal = document.getElementById("p").value;
+
+      if (nVal === "" || pVal === "") {
+        alert("Введіть число!");
+        return;
+      }
+
+      let n = parseInt(nVal);
+      let p = parseFloat(pVal);
+
+      if (isNaN(n) || isNaN(p) || p <= 0 || n < 0) {
+        alert("Введіть коректні дані!");
+        return;
+      }
+
+      let factor = Math.pow(1 + p / 100, n);
+
+      document.getElementById("bankResult").innerHTML =
+        "Вклад збільшиться у " + factor.toFixed(4) + " раз(и).";
+
+      alert("Результат: " + factor.toFixed(4));
+
+      console.log("Обчислення завершено");
+    }
+  </script>
+
+</body>
+
+</html>

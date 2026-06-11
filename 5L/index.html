@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admission Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #555;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .col {
+            flex: 1;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>School Admission Form</h1>
+
+    <form action="#" method="post">
+
+        <h3>Pupil Information</h3>
+
+        <div class="row">
+            <div class="col">
+                <label>First Name</label>
+                <input type="text" name="firstName"
+                    placeholder="Enter first name" required>
+            </div>
+
+            <div class="col">
+                <label>Last Name</label>
+                <input type="text" name="lastName"
+                    placeholder="Enter last name" required>
+            </div>
+        </div>
+
+        <label>Date of Birth</label>
+        <input type="date" name="birthDate" required>
+
+        <label>Place of Birth</label>
+        <input type="text" name="birthPlace"
+            placeholder="City, Country">
+
+        <label>Religion</label>
+        <select name="religion" required>
+            <option value="">Please Select</option>
+            <option value="christian">Christian</option>
+            <option value="muslim">Muslim</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label>Nationality</label>
+        <input type="text" name="nationality">
+
+        <label>Gender</label>
+        <select name="gender" required>
+            <option value="">Please Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <h3>Residential Address</h3>
+
+        <input type="text" name="street1"
+            placeholder="Street Address">
+
+        <input type="text" name="street2"
+            placeholder="Street Address Line 2">
+
+        <div class="row">
+            <div class="col">
+                <input type="text"
+                    placeholder="City">
+            </div>
+
+            <div class="col">
+                <input type="text"
+                    placeholder="State / Province">
+            </div>
+
+            <div class="col">
+                <input type="text"
+                    placeholder="Postal Code">
+            </div>
+        </div>
+
+        <h3>School Information</h3>
+
+        <label>Name of Last School</label>
+        <input type="text" name="lastSchool">
+
+        <label>Medium of Instruction</label>
+        <select name="instruction">
+            <option>Please Select</option>
+            <option>English</option>
+            <option>Ukrainian</option>
+        </select>
+
+        <label>Reason for Leaving Last School</label>
+        <textarea name="reason"
+            placeholder="Enter reason"></textarea>
+
+        <h3>Local Guardian</h3>
+
+        <div class="row">
+            <div class="col">
+                <label>First Name</label>
+                <input type="text" name="guardianName">
+            </div>
+
+            <div class="col">
+                <label>Last Name</label>
+                <input type="text" name="guardianLastName">
+            </div>
+        </div>
+
+        <label>Guardian Occupation</label>
+        <input type="text" name="occupation">
+
+        <label>Email</label>
+        <input type="email" name="email"
+            placeholder="example@example.com">
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone"
+            placeholder="(000) 000-0000">
+
+        <h3>Documents</h3>
+
+        <label>Leaving Certificate</label>
+        <input type="file" name="certificate">
+
+        <label>Report Card</label>
+        <input type="file" name="reportCard">
+
+        <label>Medical Certificate</label>
+        <input type="file" name="medicalCertificate">
+
+        <button type="submit">
+            Submit Application
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

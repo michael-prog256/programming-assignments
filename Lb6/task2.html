@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Перевірка належності точки області</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    img {
+        width: 300px;
+        border: 1px solid black;
+    }
+
+    input {
+        margin: 5px;
+        padding: 5px;
+        width: 80px;
+    }
+
+    button {
+        padding: 8px 15px;
+        margin-top: 10px;
+    }
+
+    #result {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h2>Перевірка належності точки заштрихованій області</h2>
+
+<img src="scope.PNG" alt="Область">
+
+<br><br>
+
+<label>
+    x:
+    <input type="number" id="x" step="any">
+</label>
+
+<label>
+    y:
+    <input type="number" id="y" step="any">
+</label>
+
+<br>
+
+<button onclick="checkPoint()">Перевірити</button>
+
+<div id="result"></div>
+
+<script>
+function checkPoint() {
+
+    let x = parseFloat(document.getElementById("x").value);
+    let y = parseFloat(document.getElementById("y").value);
+
+    if (isNaN(x) || isNaN(y)) {
+        document.getElementById("result").innerHTML =
+            "Введіть координати точки!";
+        return;
+    }
+
+    let inside = false;
+
+    if (x < 0) {
+        inside = (y >= x * x) &&
+                 (y <= -x * x + 2);
+    }
+    else {
+        inside = (y >= x * x) &&
+                 (y <= Math.exp(x));
+    }
+
+    document.getElementById("result").innerHTML =
+        inside
+        ? "Точка належить області."
+        : "Точка НЕ належить області.";
+}
+</script>
+
+</body>
+</html>

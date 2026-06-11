@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Матриці JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Лабораторна робота: Матриці</h2>
+
+<div class="block">
+
+    <h3>Створення матриці</h3>
+
+    m: <input type="number" id="rows" value="3">
+    n: <input type="number" id="cols" value="3">
+
+    <br>
+
+    k: <input type="number" id="k" value="5">
+
+    <br>
+
+    min: <input type="number" id="min" value="0">
+    max: <input type="number" id="max" value="10">
+
+    <label>
+        <input type="checkbox" id="intOnly">
+        Цілі числа
+    </label>
+
+    <br>
+
+    <button onclick="createMatrix()">Створити матрицю</button>
+    <button onclick="fillRandom()">Заповнити випадково</button>
+
+    <hr>
+
+    <div id="matrixContainer"></div>
+
+    <hr>
+
+    <button onclick="taskA()">A (виділити рядки)</button>
+    <button onclick="taskB()">B (формула)</button>
+    <button onclick="taskC()">C (поворот 90°)</button>
+
+    <h3>Результат:</h3>
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

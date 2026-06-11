@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота - Масиви JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Лабораторна робота: Масиви JavaScript</h2>
+
+<div class="block">
+
+    <h3>1. Одновимірні масиви</h3>
+
+    <button onclick="runArrays()">Запустити масиви</button>
+
+    <p id="arrInfo"></p>
+    <p id="arrLoop"></p>
+
+    <h3>foreach → таблиця (myFunction1)</h3>
+
+    <button onclick="myFunction1()">Показати таблицю</button>
+
+    <div id="tableOut"></div>
+
+    <h3>2. Двовимірний масив 4x4</h3>
+
+    <button onclick="create2D()">Створити 2D масив</button>
+
+    <p id="matrixOut"></p>
+
+    <h3>3. Вектор (динамічні поля)</h3>
+
+    <input type="number" id="n" value="5">
+    <button onclick="createVector()">Створити поля</button>
+
+    <button onclick="copy_to_array()">copy_to_array</button>
+
+    <button onclick="sortAsc()">↑ за зростанням</button>
+    <button onclick="sortDesc()">↓ за спаданням</button>
+    <button onclick="sortLastDigit()">за останньою цифрою</button>
+
+    <div id="vectorFields"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

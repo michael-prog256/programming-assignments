@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота - Вектори</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Лабораторна робота: Вектори (Варіант 15)</h2>
+
+<div class="block">
+
+    <h3>Вектор A</h3>
+
+    <label>Розмір вектора:</label>
+    <input type="number" id="vectorSize" min="1" value="3">
+    <button onclick="createVectorInputs()">Створити A</button>
+
+    <br><br>
+
+    <label>Діапазон випадкових чисел:</label>
+    <input type="number" id="minRand" value="0">
+    <input type="number" id="maxRand" value="10">
+
+    <label>
+        <input type="checkbox" id="intOnly">
+        Тільки цілі числа
+    </label>
+
+    <button onclick="fillRandom()">Заповнити випадково</button>
+
+    <div id="vectorContainer"></div>
+
+    <hr>
+
+    <h3>Вектор B</h3>
+
+    <label>Розмір B:</label>
+    <input type="number" id="vectorSizeB" value="3">
+    <button onclick="createVectorB()">Створити B</button>
+
+    <div id="vectorContainerB"></div>
+
+    <hr>
+
+    <h3>Операції</h3>
+
+    <button onclick="calcNorm()">Норма A</button>
+    <button onclick="normalizeVector()">Нормувати A</button>
+    <button onclick="calcProduct()">Добуток A</button>
+
+    <br><br>
+
+    a: <input type="number" id="coefA" value="1">
+    b: <input type="number" id="coefB" value="1">
+
+    <button onclick="linearCombination()">Лінійна комбінація (E)</button>
+
+    <h3>Результат:</h3>
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

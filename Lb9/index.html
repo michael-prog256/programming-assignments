@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Лабораторна робота</h1>
+
+    <!-- A -->
+    <div class="card">
+        <h2>Завдання A — Привітання</h2>
+        <ul>
+            <li>Ввести ім'я користувача</li>
+            <li>Ввести рік народження</li>
+            <li>Вивести привітання</li>
+        </ul>
+        <button onclick="taskA()">Виконати</button>
+        <div class="output" id="outA"></div>
+    </div>
+
+    <!-- B -->
+    <div class="card">
+        <h2>Завдання B — Брутальна клумба</h2>
+        <ul>
+            <li>Ввести довжину паркану</li>
+            <li>Обчислити площу кола</li>
+        </ul>
+        <button onclick="taskB()">Виконати</button>
+        <div class="output" id="outB"></div>
+    </div>
+
+    <!-- C -->
+    <div class="card">
+        <h2>Завдання C — Цифри числа</h2>
+        <ul>
+            <li>Ввести 4-значне число</li>
+            <li>Перенести останню цифру на початок</li>
+        </ul>
+        <button onclick="taskC()">Виконати</button>
+        <div class="output" id="outC"></div>
+    </div>
+
+    <!-- D -->
+    <div class="card">
+        <h2>Завдання D — Формула</h2>
+        <ul>
+            <li>Ввести a і b</li>
+            <li>Перевірити ОДЗ</li>
+            <li>Обчислити значення</li>
+        </ul>
+
+        <div class="inputs">
+            <input id="a" type="number" placeholder="Введіть a">
+            <input id="b" type="number" placeholder="Введіть b">
+        </div>
+
+        <button onclick="taskD()">Обчислити</button>
+        <div class="output" id="historyD"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

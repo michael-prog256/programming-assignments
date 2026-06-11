@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Робота з display</title>
+
+    <style>
+
+        div{
+            border:2px solid blue;
+            background-color:lightblue;
+            padding:10px;
+            margin:5px;
+        }
+
+        span{
+            background-color:yellow;
+            padding:5px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1>Керування елементами</h1>
+
+<div id="div1">DIV 1</div>
+<div id="div2">DIV 2</div>
+
+<br>
+
+<span id="span1">SPAN 1</span>
+<span id="span2">SPAN 2</span>
+
+<br><br>
+
+<button onclick="makeInline()">
+    Всі в inline
+</button>
+
+<button onclick="makeBlock()">
+    Повернути всі у block
+</button>
+
+<p id="message">
+    Поточний стан: block
+</p>
+
+<script>
+
+function makeInline(){
+
+    document.getElementById("div1").style.display="inline";
+    document.getElementById("div2").style.display="inline";
+    document.getElementById("span1").style.display="inline";
+    document.getElementById("span2").style.display="inline";
+
+    document.getElementById("message").innerHTML =
+    "Поточний стан: inline";
+
+}
+
+function makeBlock(){
+
+    document.getElementById("div1").style.display="block";
+    document.getElementById("div2").style.display="block";
+    document.getElementById("span1").style.display="block";
+    document.getElementById("span2").style.display="block";
+
+    document.getElementById("message").innerHTML =
+    "Поточний стан: block";
+
+}
+
+let spanEl = document.getElementById("span1");
+
+spanEl.onmouseover = function(){
+
+    spanEl.style.display = "block";
+    spanEl.style.backgroundColor = "lightblue";
+
+};
+
+spanEl.onmouseout = function(){
+
+    spanEl.style.display = "inline";
+    spanEl.style.backgroundColor = "yellow";
+
+};
+
+</script>
+
+</body>
+</html>

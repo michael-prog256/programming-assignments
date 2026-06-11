@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Веб-сторінка</h1>
+
+  <p id="demo">Параграф</p>
+
+  <label>x1</label><input id="x1" type="text"><br>
+
+  <label>x2</label><input id="x2" type="phone"><br>
+
+  <button type="button" onclick="myFunction()">Натисни</button>
+  <br>
+
+  <script>
+    document.write("Тут ми написали document.write до завантаження сторінки");
+  </script>
+
+  <p id="demo1">Hello</p>
+
+  <script>
+    function myFunction() {
+
+      console.log("Кнопку натиснуто");
+
+      alert("Привіт!");
+
+      let x1Value = document.getElementById("x1").value;
+      let x2Value = document.getElementById("x2").value;
+
+      // перевірка на пусті поля
+      if (x1Value === "" || x2Value === "") {
+        alert("Введіть число!");
+        return;
+      }
+
+      // перетворення у числа (float)
+      let x1 = parseFloat(x1Value);
+      let x2 = parseFloat(x2Value);
+
+      // ще одна перевірка (на випадок NaN)
+      if (isNaN(x1) || isNaN(x2)) {
+        alert("Введіть число!");
+        return;
+      }
+
+      let result = x1 + x2;
+
+      // зміна тексту
+      document.getElementById("demo1").innerHTML =
+        "Введене число: " + x1 + "<br>Результат: " + result;
+
+      // зміна стилю
+      document.getElementById("demo1").style.color = "red";
+
+      console.log("Обчислення завершено");
+    }
+  </script>
+</body>
+
+</html>

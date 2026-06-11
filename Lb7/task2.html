@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Block vs Inline</title>
+
+    <style>
+
+        #myElement{
+            display:block;
+            border:2px solid blue;
+            padding:10px;
+            margin:5px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1>Демонстрація block та inline</h1>
+
+<div id="myElement">
+    Це елемент для перемикання
+</div>
+
+<button onclick="toggleDisplay()">
+    Змінити відображення
+</button>
+
+<script>
+
+function toggleDisplay(){
+
+    let el = document.getElementById("myElement");
+
+    if(el.style.display == "block")
+    {
+        el.style.display = "inline";
+        console.log("Елемент тепер inline");
+    }
+    else
+    {
+        el.style.display = "block";
+        console.log("Елемент тепер block");
+    }
+
+}
+
+</script>
+
+</body>
+</html>

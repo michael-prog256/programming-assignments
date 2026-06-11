@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Робота з класами</title>
+
+<style>
+
+.box{
+    width:200px;
+    padding:20px;
+    margin:10px;
+    border:2px solid #333;
+    background-color:#f0f0f0;
+    text-align:center;
+}
+
+.highlight{
+    background-color:#ffeb3b;
+    border-color:#f44336;
+    font-weight:bold;
+    color:#d32f2f;
+}
+
+.note{
+    font-style:italic;
+    color:#555;
+    text-decoration:underline;
+}
+
+.hoverable{
+    background-color:lightgreen;
+    padding:5px;
+}
+
+button{
+    padding:10px 20px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="myBox" class="box">
+    Це блок (div) з класом box
+</div>
+
+<span class="note">
+    Це текстова замітка (span) з класом note
+</span>
+
+<br><br>
+
+<span class="hoverable">Елемент 1</span>
+<span class="hoverable">Елемент 2</span>
+<span class="hoverable">Елемент 3</span>
+
+<br><br>
+
+<button onclick="toggleHighlight()">
+    Перемкнути Highlight
+</button>
+
+<script>
+
+function toggleHighlight(){
+
+    const element =
+    document.getElementById("myBox");
+
+    element.classList.toggle("highlight");
+
+}
+
+const hoverItems =
+document.querySelectorAll(".hoverable");
+
+hoverItems.forEach(function(item){
+
+    item.addEventListener("mouseover", function(){
+
+        item.style.display = "block";
+        item.style.backgroundColor = "orange";
+
+    });
+
+    item.addEventListener("mouseout", function(){
+
+        item.style.display = "inline";
+        item.style.backgroundColor = "lightgreen";
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
